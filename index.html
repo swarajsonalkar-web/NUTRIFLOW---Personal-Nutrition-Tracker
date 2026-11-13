@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10131d" />
+  <title>NutriFlow — Daily Nutrition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main id="authView" class="auth-shell">
+    <section class="auth-brand">
+      <div class="brand-mark">✳</div> <br>
+      <p class="eyebrow">YOUR DAILY WELLNESS SPACE</p>
+      <h1>Eat well.<br><span>Feel your best.</span></h1>
+      <p class="muted intro">A calmer way to understand your food, routines and everyday nourishment.</p>
+      <div class="auth-note"><span class="pulse-dot"></span> Your data stays on this device</div>
+    </section>
+    <section class="auth-card glass">
+      <div class="tabs"><button class="tab active" data-tab="login">Sign in</button><button class="tab" data-tab="register">Create account</button></div>
+      <form id="loginForm" class="auth-form">
+        <h2>Welcome back</h2><p class="muted">Pick up where you left off.</p>
+        <label>Username<input id="loginUser" autocomplete="username" required placeholder="e.g. swaraj" /></label>
+        <label>Password<input id="loginPass" type="password" autocomplete="current-password" required placeholder="Your password" /></label>
+        <button class="primary full" type="submit">Sign in <span>→</span></button>
+        <p id="loginMsg" class="form-msg"></p>
+      </form>
+      <form id="registerForm" class="auth-form hidden">
+        <h2>Create your space</h2><p class="muted">Your profile is stored locally in this browser.</p>
+        <label>Username<input id="regUser" autocomplete="username" minlength="3" required placeholder="Choose a username" /></label>
+        <label>Password<input id="regPass" type="password" autocomplete="new-password" minlength="6" required placeholder="At least 6 characters" /></label>
+        <label>Choose your focus
+          <select id="regMode"><option value="balanced">Balanced nourishment</option><option value="gain">Support healthy weight gain</option><option value="loss">Discuss weight concerns with a professional</option></select>
+        </label>
+        <button class="primary full" type="submit">Create account <span>→</span></button>
+        <p id="registerMsg" class="form-msg"></p>
+      </form>
+      <p class="tiny">Local demo authentication only. Do not reuse an important password.</p>
+    </section>
+  </main>
+
+  <main id="appView" class="app-shell hidden">
+    <aside class="sidebar glass">
+      <a class="brand" href="#"><span class="brand-mark small">✳</span><span>Nutriflow</span></a>
+      <div class="side-label">WORKSPACE</div>
+      <button class="nav-link active" data-page="overview"><span>◫</span> Overview</button>
+      <button class="nav-link" data-page="food"><span>＋</span> Food journal</button>
+      <button class="nav-link" data-page="habits"><span>✦</span> Daily habits</button>
+      <div class="sidebar-bottom"><div class="profile-mini"><div class="avatar" id="avatarInitial">S</div><div><strong id="sideUsername">User</strong><small>Personal space</small></div></div><button id="logoutBtn" class="logout">↗ Sign out</button></div>
+    </aside>
+
+    <section class="main-content">
+      <header class="topbar"><div><p class="eyebrow">MONDAY MOTIVATION, EVERY DAY</p><h1 id="greeting">Good day 👋</h1></div><div class="top-actions"><span class="local-pill"><i></i> Saved on device</span><button id="todayBtn" class="date-pill"></button></div></header>
+
+      <section id="overviewPage" class="page nutrition-dashboard">
+        <div class="nutrition-heading"><div><p class="eyebrow">YOUR PERSONAL WELLNESS SPACE</p><h1>Nutrition</h1></div><span class="live-indicator"><i></i> TODAY</span></div>
+        <div class="nutrition-panel glass">
+          <div class="nutrition-overview"><div class="overview-copy"><p class="green-label"><span class="bars-icon">▮▮▮</span> TODAY'S PROGRESS</p><strong class="progress-number" id="mealProgressNumber">0</strong><div class="progress-caption">meals recorded today</div><p class="remaining-copy" id="mealProgressHint">Your day, one meal at a time</p></div><div class="ring-wrap"><div class="progress-ring" id="progressRing"><div class="ring-inner"><strong id="ringPercent">0%</strong><small>MEALS</small></div></div></div></div>
+          <div class="nutrition-breakdown"><div class="macro-row"><span class="macro-icon protein-icon">⬡</span><span class="macro-name">Variety</span><div class="macro-track"><i id="varietyBar"></i></div><b id="varietyValue">0 / 4</b></div><div class="macro-row"><span class="macro-icon carbs-icon">♧</span><span class="macro-name">Hydration</span><div class="macro-track"><i id="hydrationBar"></i></div><b id="hydrationValue">0 check-ins</b></div><div class="macro-row"><span class="macro-icon fat-icon">♧</span><span class="macro-name">Wellbeing</span><div class="macro-track"><i id="wellbeingBar"></i></div><b id="wellbeingValue">0 / 4</b></div></div>
+          <div class="nutrition-actions"><button class="outline-action" data-go="food"><span>＋</span> Log Manually</button><button class="scan-action" data-go="food"><span>▣</span> Add a Meal</button></div>
+        </div>
+        <div class="meal-feature glass"><div class="meal-photo"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=85" alt="Colorful nourishing meal bowl"></div><div class="meal-feature-copy"><span class="meal-category">A LITTLE INSPIRATION</span><h2>Build a colourful<br>power bowl <span>›</span></h2><p>Mix ingredients you enjoy and make room for variety.</p><div class="meal-tags"><span>🥬 Vegetables</span><span>🍚 Grains</span><span>🥑 Healthy fats</span></div></div></div>
+        <div class="dashboard-lower"><div class="section-heading"><div><p class="eyebrow">YOUR DAY</p><h2>Daily rhythm</h2></div><button class="text-btn" data-go="habits">See habits →</button></div><div class="stat-grid"><article class="stat-card glass"><div class="stat-top"><span>Meals logged</span><span class="stat-icon peach">🍽</span></div><strong id="mealCount">0</strong><small>meals today</small><div class="mini-track"><i id="mealBar"></i></div></article><article class="stat-card glass"><div class="stat-top"><span>Water check-ins</span><span class="stat-icon blue">💧</span></div><strong id="waterCount">0 <small>/ 6</small></strong><small>glasses recorded</small><div class="mini-track blue-track"><i id="waterBar"></i></div></article><article class="stat-card glass"><div class="stat-top"><span>Habit check-ins</span><span class="stat-icon violet">✦</span></div><strong id="habitCount">0 <small>/ 4</small></strong><small>healthy routines</small><div class="mini-track violet-track"><i id="habitBar"></i></div></article></div><div class="section-heading"><div><p class="eyebrow">RECENT ACTIVITY</p><h2>Latest meals</h2></div><button class="text-btn" data-go="food">Open journal →</button></div><div id="recentMeals" class="recent-list glass"><p class="empty-state">No meals yet. Add your first meal to get started.</p></div></div>
+      </section>
+      <section id="foodPage" class="page hidden">
+        <div class="page-title"><p class="eyebrow">FOOD JOURNAL</p><h2>Make space for <em>good food.</em></h2><p class="muted">Record what you eat without turning meals into a score.</p></div>
+        <div class="journal-layout">
+          <form id="mealForm" class="glass form-card"><div class="card-heading"><span class="stat-icon peach">＋</span><div><h3>Add a meal</h3><p class="muted">A simple note for your day</p></div></div>
+            <label>Meal name<input id="mealName" required maxlength="70" placeholder="e.g. Dal, rice and vegetables" /></label>
+            <div class="two-col"><label>Meal type<select id="mealType"><option>Breakfast</option><option>Lunch</option><option>Snack</option><option>Dinner</option></select></label><label>Time<input id="mealTime" type="time" required /></label></div>
+            <label>How did it feel? <select id="mealFeeling"><option>Enjoyed it</option><option>Felt satisfied</option><option>Need more variety</option><option>Not sure</option></select></label>
+            <label>Notes <textarea id="mealNotes" rows="3" maxlength="220" placeholder="Optional: ingredients, who you ate with, or anything you noticed…"></textarea></label>
+            <button class="primary full" type="submit">Save meal <span>↗</span></button>
+          </form>
+          <div class="glass journal-side"><p class="eyebrow">A KIND REMINDER</p><div class="big-emoji">🥗</div><h3>All foods can fit.</h3><p class="muted">There are no “good” or “bad” foods here. Notice variety, satisfaction and how your routine supports your day.</p><div class="tip-line"></div><strong>Try this</strong><p class="muted">Include a mix of foods across the day, and enjoy meals without needing to earn them.</p></div>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">YOUR RECORDS</p><h2>Meal history</h2></div><span class="muted small-text" id="mealTotal">0 entries</span></div>
+        <div id="mealHistory" class="meal-history"></div>
+      </section>
+
+      <section id="habitsPage" class="page hidden">
+        <div class="page-title"><p class="eyebrow">DAILY HABITS</p><h2>Look after <em>your whole self.</em></h2><p class="muted">Gentle reminders, not rules. Check in with what feels achievable today.</p></div>
+        <div class="habit-layout">
+          <div class="glass habit-card"><div class="card-heading"><span class="stat-icon blue">💧</span><div><h3>Hydration check-in</h3><p class="muted">Record a glass whenever you have water.</p></div></div><div class="water-row" id="waterDots"></div><div class="button-row"><button id="addWater" class="primary">＋ Add a glass</button><button id="resetWater" class="secondary">Reset today</button></div><p class="tiny">The six markers are just check-ins, not a required daily target. Follow your thirst and any medical advice.</p></div>
+          <div class="glass habit-card"><div class="card-heading"><span class="stat-icon violet">✦</span><div><h3>Daily wellbeing</h3><p class="muted">Small things that help you feel supported.</p></div></div><div id="habitList" class="habit-list"></div></div>
+        </div>
+        <div class="glass note-card"><span>💜</span><div><strong>Your focus can change.</strong><p class="muted">If you're worried about your weight, growth or eating, talk with a parent/guardian and a qualified healthcare professional. This app does not set calorie limits, weight targets or weight-change plans.</p></div></div>
+      </section>
+      <nav class="bottom-nav"><button class="bottom-link active" data-page="overview"><span>⌂</span>Today</button><button class="bottom-link" data-page="food"><span>▤</span>Journal</button><button class="bottom-link" data-page="habits"><span>✚</span>Habits</button><button class="bottom-link" id="bottomProfile"><span>◎</span>You</button></nav>
+      <footer>NutriFlow <span>•</span> A little more mindful, one day at a time.</footer>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
