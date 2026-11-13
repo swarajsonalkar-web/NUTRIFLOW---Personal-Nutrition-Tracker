@@ -1,14 +1,124 @@
-# NutriFlow — Nutrition & Wellness Tracker
+# 🥗 NUTRI FLOW
 
-Responsive HTML/CSS/JavaScript app with local registration/login, food journaling, hydration check-ins and daily wellbeing habits.
+### Your Personal Nutrition & Wellness Companion
 
-## Run
-1. Extract the folder and open it in VS Code.
-2. Run `index.html` with Live Server.
-3. Create an account and sign in.
+**NUTRI FLOW by SWARAAJ INDUSTRIES**
 
-## Storage & security
-Uses IndexedDB in this browser on this device. Passwords are SHA-256 hashed for this demo; this is not production-grade authentication. Data is not synced and clearing browser site data may erase it. Do not reuse an important password.
+Track Better. Understand Nutrition. Build Healthier Habits.
 
-## Wellness approach
-The dashboard tracks meal check-ins, variety, hydration and wellbeing. It does not prescribe calorie limits or weight-change targets. For personal nutrition or weight concerns, speak with a trusted adult and a qualified healthcare professional.
+---
+
+## 📌 About the Project
+
+NUTRI FLOW is a personal nutrition tracking web application designed to simplify daily calorie monitoring, food tracking and personalized nutrition management.
+
+The application provides dedicated nutrition modes for individuals with different goals, including weight gain and weight loss.
+
+Its objective is to make nutrition tracking accessible through a modern, intuitive and personalized digital experience.
+
+## ✨ Features
+
+- 🥗 Food and meal tracking
+- 🔥 Daily calorie monitoring
+- ⚖️ Weight Gain Mode
+- 🎯 Weight Loss Mode
+- 📊 Nutrition dashboard
+- 📅 Daily progress tracking
+- 🎨 Modern and responsive interface
+- 📈 Personalized nutrition targets
+
+*Refer to the actual application for the features currently implemented.*
+
+## 🎯 Project Objectives
+
+- Simplify daily food and calorie tracking.
+- Support personalized nutrition goals.
+- Provide separate weight-gain and weight-loss experiences.
+- Help users understand their nutritional habits.
+- Present nutrition information in an organized dashboard.
+
+## 🛠️ Technology Stack
+
+Update according to the actual implementation:
+
+- HTML5
+- CSS3
+- JavaScript
+- [Add backend/database technologies]
+
+## 📂 Project Structure
+
+```text
+nutri-flow/
+├── assets/
+├── css/
+├── js/
+├── images/
+├── index.html
+├── README.md
+├── .gitignore
+└── package.json
+```
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/nutri-flow.git
+```
+
+### Open the project
+
+```bash
+cd nutri-flow
+```
+
+Open `index.html` in your browser or use the configured development server.
+
+## 🔐 Privacy & Security
+
+- Protect personal user information.
+- Never upload passwords or API keys.
+- Never commit private credentials.
+- Apply appropriate database security rules.
+- Handle personal nutrition information responsibly.
+
+## 🗺️ Future Roadmap
+
+- [ ] Advanced food database
+- [ ] AI-powered food recognition
+- [ ] Personalized meal recommendations
+- [ ] Weekly and monthly nutrition analytics
+- [ ] Water intake tracking
+- [ ] Meal planning system
+- [ ] Progress visualization
+- [ ] User authentication
+- [ ] Cloud synchronization
+
+## 🏢 Project Information
+
+| Detail | Information |
+|---|---|
+| Project Name | NUTRI FLOW |
+| Organization | Swaraaj Industries |
+| Category | Nutrition & Wellness |
+| Project Type | Web Application |
+| Developer | Swaraj Sonalkar |
+| Status | Development |
+
+## 👨‍💻 Developed By
+
+**Swaraj Sonalkar**
+
+Swaraaj Industries
+
+GitHub: https://github.com/swarajsonalkar-web
+
+---
+
+**NUTRI FLOW**
+
+*Track Better. Understand Nutrition. Build Healthier Habits.*
+
+© 2026 Swaraaj Industries. All rights reserved.
